@@ -109,7 +109,7 @@ export default async function Home() {
 
       {/* WHO WE ARE */}
       <section style={{ padding: "110px 80px" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+        <div className="home-grid-2" style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gap: 40, alignItems: "center" }}>
           <div className="reveal-left">
             <div style={{ display: "inline-flex", alignItems: "center", gap: 14, background: "#210706", color: "#F1E6D2", padding: "12px 22px", marginBottom: 44 }}>
               <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 30, fontWeight: 300 }}>2,400+</span>
@@ -154,7 +154,7 @@ export default async function Home() {
               How We <span style={{ fontStyle: "italic", color: "#DDD0BC" }}>Simplify</span> Your Journey
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 3 }}>
+          <div style={{ display: "grid", gap: 3 }}>
             {[
               { n: "01", title: "Discover", desc: "Browse curated architect profiles filtered by specialty, location, style, and budget.", img: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=700", d: "delay-1" },
               { n: "02", title: "Connect", desc: "Send direct messages, share your vision, and discuss project scope and requirements.", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700", d: "delay-2" },
@@ -184,7 +184,7 @@ export default async function Home() {
               Why <span style={{ fontStyle: "italic", color: "#891D1A" }}>Choose</span> ArchLink
             </h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
+          <div style={{ display: "grid", gap: 20 }}>
             {[
               { title: "Verified Professionals", desc: "Every architect on ArchLink is verified. We check licenses, review portfolios, and confirm credentials.", img: null, d: "delay-1" },
               { title: "Real Reviews", desc: "Transparent ratings and detailed reviews from real clients. Make informed decisions.", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600", d: "delay-2" },
@@ -211,7 +211,7 @@ export default async function Home() {
 
       {/* FOR ARCHITECTS */}
       <section style={{ background: "#210706", padding: "110px 80px" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 100, alignItems: "center" }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gap: 40, alignItems: "center" }}>
           <div className="reveal-left" style={{ position: "relative" }}>
             <div className="hover-zoom" style={{ overflow: "hidden", height: 540 }}>
               <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900" alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />

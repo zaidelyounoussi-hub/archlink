@@ -347,3 +347,13 @@ main {
     display: none !important;
   }
 }
+
+/* Homepage grid responsive */
+@media (min-width: 768px) {
+  .home-grid-2 { grid-template-columns: 1fr 1fr !important; gap: 80px !important; }
+  .home-grid-2-large { grid-template-columns: 1fr 1fr !important; gap: 100px !important; }
+  .home-grid-3 { grid-template-columns: repeat(3, 1fr) !important; }
+}
+.home-grid-2, .home-grid-2-large, .home-grid-3 {
+  grid-template-columns: 1fr !important;
+}
