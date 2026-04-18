@@ -15,7 +15,7 @@ export default async function Home() {
   }
 
   return (
-    <main style={{ fontFamily: "DM Sans, sans-serif", background: "#F1E6D2", color: "#210706", margin: 0, padding: 0 }}>
+    <main style={{ fontFamily: "DM Sans, sans-serif", background: "#F1E6D2", color: "#210706", margin: 0, padding: 0, overflowX: "hidden" }}>
 
       {/* NAVBAR */}
       <nav style={{
