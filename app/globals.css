@@ -1,0 +1,187 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.goog-te-banner-frame { display: none !important; }
+.goog-te-gadget { display: none !important; }
+body { top: 0 !important; }
+iframe.skiptranslate { display: none !important; }
+:root {
+  --cream: #F1E6D2;
+  --ink: #210706;
+  --stone: #7A6A6A;
+  --terracotta: #891D1A;
+  --terracotta-light: #A83330;
+  --sage: #5E657B;
+  --border: #DDD0BC;
+  --card: #FFFFFF;
+}
+html.dark {
+  --cream: #1C1714;
+  --ink: #EDE0CC;
+  --stone: #9C8878;
+  --terracotta: #C0413E;
+  --terracotta-light: #D45550;
+  --sage: #7E8699;
+  --border: #3A2E28;
+  --card: #251E1A;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+.display {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--stone); }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-up { animation: fadeUp 0.7s ease forwards; }
+.animate-fade-in { animation: fadeIn 0.5s ease forwards; }
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+*:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 2px; }
+.btn-primary {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 0.75rem 1.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 1px solid var(--ink);
+}
+.btn-primary:hover {
+  background: var(--terracotta);
+  border-color: var(--terracotta);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--ink);
+  padding: 0.75rem 1.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+}
+.btn-outline:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.input {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  color: var(--ink);
+  width: 100%;
+  transition: border-color 0.2s, background-color 0.3s ease;
+}
+.input:focus { outline: none; border-color: var(--terracotta); }
+.input::placeholder { color: var(--stone); }
+.star-filled { color: var(--terracotta); }
+.star-empty { color: var(--border); }
+
+/* Dark mode overrides for hardcoded whites */
+html.dark .bg-white { background-color: var(--card) !important; }
+html.dark [style*="background: white"],
+html.dark [style*="background-color: white"],
+html.dark [style*="background:white"] {
+  background-color: var(--card) !important;
+}
+html.dark [style*="color: #210706"],
+html.dark [style*="color:#210706"] {
+  color: var(--ink) !important;
+}
+html.dark [style*="background: #F1E6D2"],
+html.dark [style*="background-color: #F1E6D2"] {
+  background-color: var(--cream) !important;
+}
+html.dark [style*="border-color: #DDD0BC"],
+html.dark [style*="border: 1px solid #DDD0BC"] {
+  border-color: var(--border) !important;
+}
+html.dark [style*="color: #7A6A6A"] {
+  color: var(--stone) !important;
+}
+
+/* Navbar dark mode fix */
+html.dark nav.fixed {
+  background-color: rgba(28, 23, 20, 0.95) !important;
+}
+html.dark .hover\:bg-\[var\(--cream\)\]:hover {
+  background-color: var(--border) !important;
+}
+
+/* Browse hero always dark */
+html.dark [style*="background: var(--ink)"] {
+  background: #2A1F1A !important;
+}
+
+/* Browse page background darker in dark mode */
+html.dark .max-w-7xl {
+  background: transparent;
+}
+html.dark body {
+  background-color: #1C1714;
+}
+
+/* Browse hero lighter in dark mode */
+html.dark .architects-hero {
+  background: #2C2320 !important;
+  filter: none !important;
+}
+
+/* Browse hero background in dark mode */
+html.dark .architects-hero {
+  background: #3D2F28 !important;
+  filter: none !important;
+}
+
+/* Browse hero background in dark mode - lighter warm tone */
+html.dark .architects-hero {
+  background: #4A3830 !important;
+  filter: none !important;
+}
+
+/* Hide navbar when story viewer is open */
+body:has([data-story-open]) nav {
+  display: none !important;
+}
+
+/* Force hide navbar when story is open */
+body:has(div[style*="z-index: 9999"]) nav,
+body:has(div[style*="zIndex: 9999"]) nav {
+  display: none !important;
+}
