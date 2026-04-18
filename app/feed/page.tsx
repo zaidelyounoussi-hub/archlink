@@ -242,7 +242,7 @@ export default function FeedPage() {
           display: "flex", alignItems: "center", justifyContent: "center",
           boxShadow: "0 4px 20px rgba(33,7,6,0.3)",
           transition: "transform 0.2s",
-          padding: 0, position: "fixed",
+          padding: 0,
         }}
         onMouseEnter={e => (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.1)"}
         onMouseLeave={e => (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)"}
