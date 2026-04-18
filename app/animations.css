@@ -289,3 +289,61 @@ main {
     opacity: 1 !important;
   }
 }
+
+/* ===== MOBILE RESPONSIVE FIXES ===== */
+@media (max-width: 768px) {
+
+  /* Fix 3-column grids to single column */
+  .step-card,
+  [style*="gridTemplateColumns: \"1fr 1fr 1fr\""],
+  [style*="grid-template-columns: 1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix 2-column grids to single column */
+  [style*="gridTemplateColumns: \"1fr 1fr\""],
+  [style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix large padding on sections */
+  [style*="padding: \"150px 80px\""],
+  [style*="padding: \"120px 80px\""],
+  [style*="padding: \"100px 80px\""] {
+    padding: 60px 20px !important;
+  }
+
+  [style*="padding: \"80px\""] {
+    padding: 40px 20px !important;
+  }
+
+  /* Fix footer overlap */
+  [style*="display: \"flex\""][style*="gap: 40"] {
+    flex-wrap: wrap !important;
+    gap: 16px !important;
+  }
+
+  /* Fix hero stats */
+  .hero-stats {
+    animation: none !important;
+    transform: none !important;
+    position: relative !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0 16px !important;
+    justify-content: space-around !important;
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+
+  /* Fix step cards grid */
+  .step-card {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  /* Fix footer text overlap */
+  [style*="\"2025\""] {
+    display: none !important;
+  }
+}
