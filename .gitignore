@@ -4,3 +4,4 @@
 *.db
 prisma/dev.db
 prisma/migrations/
+.env.local

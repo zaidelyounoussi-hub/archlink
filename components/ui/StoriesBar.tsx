@@ -91,7 +91,7 @@ function StoryViewer({ groups, startIdx, onClose, onSeen }: { groups: any[]; sta
 
       {/* Prev story preview */}
       <div style={{ position: "absolute", left: "calc(50% - 520px)", top: "50%", transform: "translateY(-50%)", opacity: prevGroup ? 1 : 0, pointerEvents: prevGroup ? "auto" : "none" }}>
-        {prevGroup && <StoryCard group={prevGroup} onClick={(e: any) => { e.stopPropagation(); setGroupIdx(i => i - 1); setStoryIdx(0); }} scale={0.75} />}
+        {prevGroup && <StoryCard group={prevGroup} onClick={() => { setGroupIdx(i => i - 1); setStoryIdx(0); }} scale={0.75} />}
       </div>
 
       {/* Main story */}
@@ -137,7 +137,7 @@ function StoryViewer({ groups, startIdx, onClose, onSeen }: { groups: any[]; sta
 
       {/* Next story preview */}
       <div style={{ position: "absolute", right: "calc(50% - 520px)", top: "50%", transform: "translateY(-50%)", opacity: nextGroup ? 1 : 0, pointerEvents: nextGroup ? "auto" : "none" }}>
-        {nextGroup && <StoryCard group={nextGroup} onClick={(e: any) => { e.stopPropagation(); setGroupIdx(i => i + 1); setStoryIdx(0); }} scale={0.75} />}
+        {nextGroup && <StoryCard group={nextGroup} onClick={() => { setGroupIdx(i => i + 1); setStoryIdx(0); }} scale={0.75} />}
       </div>
 
       {/* Arrow buttons */}

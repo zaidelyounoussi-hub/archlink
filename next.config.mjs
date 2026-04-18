@@ -1,4 +1,4 @@
-/** @type {import("next").NextConfig} */
+﻿/** @type {import("next").NextConfig} */
 const nextConfig = {
   images: {
     domains: [
@@ -7,8 +7,11 @@ const nextConfig = {
       "images.unsplash.com",
       "randomuser.me",
       "res.cloudinary.com",
+      "flagcdn.com",
     ],
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
-
 export default nextConfig;

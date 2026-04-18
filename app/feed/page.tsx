@@ -244,8 +244,8 @@ export default function FeedPage() {
           transition: "transform 0.2s",
           padding: 0,
         }}
-        onMouseEnter={e => (e.currentTarget as HTMLButtonElement).style.transform = "scale(1.1)"}
-        onMouseLeave={e => (e.currentTarget as HTMLButtonElement).style.transform = "scale(1)"}
+        onMouseEnter={() => {}}
+        onMouseLeave={() => {}}
       >
         <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
           <path d="M25 85 L25 50 Q25 20 50 20 Q75 20 75 50 L75 85" stroke="#6B3A2A" strokeWidth="12" strokeLinecap="round" fill="none"/>
