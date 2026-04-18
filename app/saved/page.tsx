@@ -1,5 +1,5 @@
-export const dynamic = "force-dynamic";
 "use client";
+export const dynamic = "force-dynamic";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { useSession } from "next-auth/react";
@@ -106,7 +106,7 @@ export default function SavedPostsPage() {
                       </div>
                       <div style={{ display: "flex", gap: 6, marginTop: 2, alignItems: "center" }}>
                         <span className="text-xs text-[var(--stone)]">{formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })}</span>
-                        <span className="text-xs text-[var(--stone)]">Â·</span>
+                        <span className="text-xs text-[var(--stone)]">Ã‚Â·</span>
                         <span className="text-xs text-[var(--stone)]">{POST_TYPES[post.type] || post.type}</span>
                       </div>
                     </div>
