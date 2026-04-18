@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
@@ -21,7 +21,7 @@ export default async function Home() {
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: "0 60px", height: 72,
+        padding: "0 16px", height: 72,
         background: "rgba(241,230,210,0.95)", backdropFilter: "blur(12px)",
         borderBottom: "1px solid rgba(33,7,6,0.1)",
       }}>
@@ -29,7 +29,7 @@ export default async function Home() {
           <img src="/logo.png" alt="ArchLink" className="logo-img" style={{ width: 38, height: 38, objectFit: "contain" }} />
           <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 26, fontWeight: 400, letterSpacing: "-0.02em", color: "#210706" }}>ArchLink</span>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 40 }}>
+        <div className="hidden md:flex" style={{ alignItems: "center", gap: 40, display: "flex" }}>
           <Link href="/architects" className="nav-link" style={{ fontSize: 13, color: "#7A6A6A", textDecoration: "none" }}>Browse Architects</Link>
           <Link href="/login" className="nav-link" style={{ fontSize: 13, color: "#7A6A6A", textDecoration: "none" }}>Sign In</Link>
           <LanguageSwitcher />
@@ -92,15 +92,15 @@ export default async function Home() {
           </div>
         </div>
         <div className="hero-stats" style={{
-          position: "absolute", right: 80, bottom: 80, zIndex: 3,
+          position: "absolute", right: 16, bottom: 16, zIndex: 3,
           background: "rgba(241,230,210,0.96)", backdropFilter: "blur(20px)",
-          padding: "28px 40px", display: "flex", gap: 44,
+          padding: "16px 20px", display: "flex", gap: 20,
           borderLeft: "3px solid #891D1A",
           boxShadow: "0 20px 60px rgba(33,7,6,0.25)",
         }}>
           {[{ n: "2,400+", l: "Architects" }, { n: "18k+", l: "Projects" }, { n: "94%", l: "Satisfaction" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
-              <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 34, fontWeight: 300, color: "#210706", lineHeight: 1, margin: 0 }}>{s.n}</p>
+              <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 24, fontWeight: 300, color: "#210706", lineHeight: 1, margin: 0 }}>{s.n}</p>
               <p style={{ fontSize: 10, color: "#7A6A6A", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 6, marginBottom: 0 }}>{s.l}</p>
             </div>
           ))}
