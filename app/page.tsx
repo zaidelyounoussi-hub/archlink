@@ -21,7 +21,7 @@ export default async function Home() {
       <nav style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        padding: "0 16px", height: 72,
+        padding: "0 12px", height: 64,
         background: "rgba(241,230,210,0.95)", backdropFilter: "blur(12px)",
         borderBottom: "1px solid rgba(33,7,6,0.1)",
       }}>
@@ -29,7 +29,7 @@ export default async function Home() {
           <img src="/logo.png" alt="ArchLink" className="logo-img" style={{ width: 38, height: 38, objectFit: "contain" }} />
           <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 26, fontWeight: 400, letterSpacing: "-0.02em", color: "#210706" }}>ArchLink</span>
         </div>
-        <div className="hidden md:flex" style={{ alignItems: "center", gap: 40, display: "flex" }}>
+        <div className="hidden md:flex items-center" style={{ gap: 40 }}>
           <Link href="/architects" className="nav-link" style={{ fontSize: 13, color: "#7A6A6A", textDecoration: "none" }}>Browse Architects</Link>
           <Link href="/login" className="nav-link" style={{ fontSize: 13, color: "#7A6A6A", textDecoration: "none" }}>Sign In</Link>
           <LanguageSwitcher />
@@ -57,7 +57,7 @@ export default async function Home() {
         <div style={{
           position: "relative", zIndex: 2,
           display: "flex", flexDirection: "column", justifyContent: "flex-end",
-          height: "100%", padding: "0 80px 100px",
+          height: "100%", padding: "0 20px 80px",
         }}>
           <p className="hero-label" style={{ fontSize: 11, letterSpacing: "0.35em", textTransform: "uppercase", color: "#DDD0BC", marginBottom: 24 }}>
             The Architecture Marketplace
@@ -92,9 +92,9 @@ export default async function Home() {
           </div>
         </div>
         <div className="hero-stats" style={{
-          position: "absolute", right: 16, bottom: 16, zIndex: 3,
+          position: "absolute", left: 16, right: 16, bottom: 16, zIndex: 3,
           background: "rgba(241,230,210,0.96)", backdropFilter: "blur(20px)",
-          padding: "16px 20px", display: "flex", gap: 20,
+          padding: "14px 16px", display: "flex", gap: 16, justifyContent: "space-around",
           borderLeft: "3px solid #891D1A",
           boxShadow: "0 20px 60px rgba(33,7,6,0.25)",
         }}>
