@@ -1,4 +1,5 @@
-﻿import { prisma } from "@/lib/prisma";
+export const dynamic = "force-dynamic";
+import { prisma } from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { getServerSession } from "next-auth";
