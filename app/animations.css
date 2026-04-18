@@ -272,3 +272,20 @@ html {
 main {
   animation: fadeIn 0.3s ease both;
 }
+/* Mobile fixes */
+@media (max-width: 768px) {
+  .hero-stats {
+    animation: none !important;
+    transform: none !important;
+  }
+  .reveal-right {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .reveal-left {
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
