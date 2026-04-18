@@ -185,3 +185,21 @@ body:has(div[style*="z-index: 9999"]) nav,
 body:has(div[style*="zIndex: 9999"]) nav {
   display: none !important;
 }
+
+/* Mobile responsive fixes */
+@media (min-width: 768px) {
+  .feed-grid {
+    grid-template-columns: 1fr 300px !important;
+  }
+}
+.feed-grid {
+  grid-template-columns: 1fr !important;
+}
+.feed-sidebar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .feed-sidebar {
+    display: block;
+  }
+}

@@ -187,7 +187,7 @@ export default function FeedPage() {
     <>
       <Navbar />
       <main style={{ paddingTop: 64, minHeight: "100vh", background: "var(--cream)" }}>
-        <div style={{ maxWidth: 1050, margin: "0 auto", padding: "28px 16px", display: "grid", gridTemplateColumns: "1fr 300px", gap: 28, alignItems: "start" }}>
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-7 items-start" style={{ maxWidth: 1050, margin: "0 auto", padding: "28px 16px" }}>
 
           {/* LEFT - Stories + Feed */}
 <div>
@@ -196,7 +196,7 @@ export default function FeedPage() {
 </div>
 
           {/* RIGHT - Suggested */}
-          <div style={{ position: "sticky", top: 84 }}>
+          <div className="hidden md:block" style={{ position: "sticky", top: 84 }}>
             <div style={{ background: "var(--card)", border: "1px solid var(--border)", padding: "16px 20px", marginBottom: 16 }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
                 <p style={{ fontSize: 13, fontWeight: 700, color: "var(--stone)", margin: 0 }}>Suggested for you</p>

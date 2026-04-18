@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+﻿export const dynamic = "force-dynamic";
 import { prisma } from "@/lib/prisma";
 import { Navbar } from "@/components/layout/Navbar";
 import { ArchitectCard } from "@/components/ui/ArchitectCard";
@@ -52,7 +52,7 @@ export default async function ArchitectsPage({
         <div className="py-14 px-6 lg:px-12 bg-[var(--ink)]">
           <div className="max-w-7xl mx-auto">
             <p className="text-xs tracking-[0.3em] uppercase text-[var(--terracotta)] mb-4">Discover</p>
-            <h1 className="display text-6xl text-[var(--cream)] mb-6">Find your architect.</h1>
+            <h1 className="display text-4xl md:text-6xl text-[var(--cream)] mb-6">Find your architect.</h1>
             <p className="text-[var(--stone)] max-w-xl">
               Browse {profiles.length} verified professionals across every architectural specialty.
             </p>
