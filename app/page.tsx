@@ -92,15 +92,15 @@ export default async function Home() {
           </div>
         </div>
         <div className="hero-stats" style={{
-          position: "absolute", left: 16, right: 16, bottom: 16, zIndex: 3,
+          position: "absolute", right: 40, bottom: 40, zIndex: 3,
           background: "rgba(241,230,210,0.96)", backdropFilter: "blur(20px)",
-          padding: "14px 16px", display: "flex", gap: 16, justifyContent: "space-around",
+          padding: "28px 40px", display: "flex", gap: 44,
           borderLeft: "3px solid #891D1A",
           boxShadow: "0 20px 60px rgba(33,7,6,0.25)",
         }}>
           {[{ n: "2,400+", l: "Architects" }, { n: "18k+", l: "Projects" }, { n: "94%", l: "Satisfaction" }].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
-              <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 24, fontWeight: 300, color: "#210706", lineHeight: 1, margin: 0 }}>{s.n}</p>
+              <p style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 34, fontWeight: 300, color: "#210706", lineHeight: 1, margin: 0 }}>{s.n}</p>
               <p style={{ fontSize: 10, color: "#7A6A6A", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 6, marginBottom: 0 }}>{s.l}</p>
             </div>
           ))}
