@@ -1,4 +1,4 @@
-import { getServerSession } from "next-auth";
+﻿import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { AccountPage } from "@/components/ui/AccountPage";
 import { ClientOnly } from "@/components/ui/ClientOnly";
 
+export const dynamic = "force-dynamic";
 export default async function MyAccountPage() {
   const session = await getServerSession(authOptions);
   if (!session) redirect("/login");

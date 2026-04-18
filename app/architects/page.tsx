@@ -1,4 +1,5 @@
-﻿import { prisma } from "@/lib/prisma";
+export const dynamic = "force-dynamic";
+import { prisma } from "@/lib/prisma";
 import { Navbar } from "@/components/layout/Navbar";
 import { ArchitectCard } from "@/components/ui/ArchitectCard";
 import { SearchFilters } from "@/components/ui/SearchFilters";

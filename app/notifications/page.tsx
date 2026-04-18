@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 "use client";
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/layout/Navbar";
@@ -72,7 +73,7 @@ export default function NotificationsPage() {
             <div className="text-center py-20">
               <Bell size={40} className="mx-auto mb-4 text-[var(--stone)] opacity-30" />
               <p className="display text-3xl text-[var(--stone)] mb-2">No notifications</p>
-              <p className="text-sm text-[var(--stone)]">When someone messages, likes, or comments — it will appear here.</p>
+              <p className="text-sm text-[var(--stone)]">When someone messages, likes, or comments â€” it will appear here.</p>
             </div>
           )}
 
@@ -106,7 +107,7 @@ export default function NotificationsPage() {
                       </div>
                       {n.link && (
                         <Link href={n.link} className="inline-flex items-center gap-1 mt-2 text-xs text-[var(--terracotta)] hover:underline">
-                          View →
+                          View â†’
                         </Link>
                       )}
                     </div>
